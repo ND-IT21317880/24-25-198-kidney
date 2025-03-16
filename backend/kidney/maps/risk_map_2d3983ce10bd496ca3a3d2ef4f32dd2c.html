@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_98a11fb8dd3efb2488b5648f2bd95105 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_98a11fb8dd3efb2488b5648f2bd95105" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_98a11fb8dd3efb2488b5648f2bd95105 = L.map(
+                "map_98a11fb8dd3efb2488b5648f2bd95105",
+                {
+                    center: [7.562025, 80.958315],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_043bf2c0487e0be261d45fad40e7cf1b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_043bf2c0487e0be261d45fad40e7cf1b.addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+            var marker_138e960bd53fd02720485fc2c99ae7ab = L.marker(
+                [7.562025, 80.958315],
+                {
+}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+            var icon_584708c2a5df4fb43627f4b7e88f6c86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d127dd65d91e4d0168a96ade2b82810b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2dd0b2714d20c18fb76b8bdc51cb6e5 = $(`<div id="html_e2dd0b2714d20c18fb76b8bdc51cb6e5" style="width: 100.0%; height: 100.0%;">User Location: 7.562025, 80.958315 Predicted Risk: A Medium Risk Area</div>`)[0];
+                popup_d127dd65d91e4d0168a96ade2b82810b.setContent(html_e2dd0b2714d20c18fb76b8bdc51cb6e5);
+            
+        
+
+        marker_138e960bd53fd02720485fc2c99ae7ab.bindPopup(popup_d127dd65d91e4d0168a96ade2b82810b)
+        ;
+
+        
+    
+    
+                marker_138e960bd53fd02720485fc2c99ae7ab.setIcon(icon_584708c2a5df4fb43627f4b7e88f6c86);
+            
+    
+            var circle_marker_879e90cdaa7e09fbca5d9c18041a2f0e = L.circleMarker(
+                [7.52674666, 80.95059333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_14463e84e39dd7b911bdda6ae4a8415a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd213bcc2e91db6484a1eda38c793262 = $(`<div id="html_dd213bcc2e91db6484a1eda38c793262" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.52674666, 80.95059333</div>`)[0];
+                popup_14463e84e39dd7b911bdda6ae4a8415a.setContent(html_dd213bcc2e91db6484a1eda38c793262);
+            
+        
+
+        circle_marker_879e90cdaa7e09fbca5d9c18041a2f0e.bindPopup(popup_14463e84e39dd7b911bdda6ae4a8415a)
+        ;
+
+        
+    
+    
+            var circle_marker_d7499ae3c19acd4ff84212f2e2cb4278 = L.circleMarker(
+                [7.53067, 80.95509833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_b51403b2d5a198a7e157bc8000d486c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2cbef52971976d14b6aded3bbcd6f00 = $(`<div id="html_b2cbef52971976d14b6aded3bbcd6f00" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53067, 80.95509833</div>`)[0];
+                popup_b51403b2d5a198a7e157bc8000d486c3.setContent(html_b2cbef52971976d14b6aded3bbcd6f00);
+            
+        
+
+        circle_marker_d7499ae3c19acd4ff84212f2e2cb4278.bindPopup(popup_b51403b2d5a198a7e157bc8000d486c3)
+        ;
+
+        
+    
+    
+            var circle_marker_a6e81d7314370b9deb1f483eb15d92b4 = L.circleMarker(
+                [7.53193333, 80.957475],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_41558bde77f8beb136cf87fdc41f9cb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f19e5cb54fccdc4593ffcfac254cfc8 = $(`<div id="html_0f19e5cb54fccdc4593ffcfac254cfc8" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.53193333, 80.957475</div>`)[0];
+                popup_41558bde77f8beb136cf87fdc41f9cb6.setContent(html_0f19e5cb54fccdc4593ffcfac254cfc8);
+            
+        
+
+        circle_marker_a6e81d7314370b9deb1f483eb15d92b4.bindPopup(popup_41558bde77f8beb136cf87fdc41f9cb6)
+        ;
+
+        
+    
+    
+            var circle_marker_035158e49ee86256d034df8d1d829fda = L.circleMarker(
+                [7.53341, 80.9523033],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_f9d6dc4c5b57f1a6100e905bc3b445d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_970b4bd94b492cb202768318848090ca = $(`<div id="html_970b4bd94b492cb202768318848090ca" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.53341, 80.9523033</div>`)[0];
+                popup_f9d6dc4c5b57f1a6100e905bc3b445d4.setContent(html_970b4bd94b492cb202768318848090ca);
+            
+        
+
+        circle_marker_035158e49ee86256d034df8d1d829fda.bindPopup(popup_f9d6dc4c5b57f1a6100e905bc3b445d4)
+        ;
+
+        
+    
+    
+            var circle_marker_83600429256ca066460c52474de81be6 = L.circleMarker(
+                [7.53353, 80.95804333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_caebc428ce59033a7b2f6f669f824180 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32b1cdab8b60d0b1ec2579b7a8dcebad = $(`<div id="html_32b1cdab8b60d0b1ec2579b7a8dcebad" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53353, 80.95804333</div>`)[0];
+                popup_caebc428ce59033a7b2f6f669f824180.setContent(html_32b1cdab8b60d0b1ec2579b7a8dcebad);
+            
+        
+
+        circle_marker_83600429256ca066460c52474de81be6.bindPopup(popup_caebc428ce59033a7b2f6f669f824180)
+        ;
+
+        
+    
+    
+            var circle_marker_bac6fbf589d239eb8a54cd2d4d7bdd9c = L.circleMarker(
+                [7.53367333, 80.95484499],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_354c04f25c8796db816849ea6ca5d1df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_784e51f4bec942f396322c2f6d5e5132 = $(`<div id="html_784e51f4bec942f396322c2f6d5e5132" style="width: 100.0%; height: 100.0%;">Risk Area: A High Risk Area Location: 7.53367333, 80.95484499</div>`)[0];
+                popup_354c04f25c8796db816849ea6ca5d1df.setContent(html_784e51f4bec942f396322c2f6d5e5132);
+            
+        
+
+        circle_marker_bac6fbf589d239eb8a54cd2d4d7bdd9c.bindPopup(popup_354c04f25c8796db816849ea6ca5d1df)
+        ;
+
+        
+    
+    
+            var circle_marker_015d703d90e0d8bcfad7a0cebffef512 = L.circleMarker(
+                [7.53478, 80.95851167],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_8219c6bd6727c9e609226f23100eb24b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_361a22c129c3a94cf547bd1e63556b26 = $(`<div id="html_361a22c129c3a94cf547bd1e63556b26" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.53478, 80.95851167</div>`)[0];
+                popup_8219c6bd6727c9e609226f23100eb24b.setContent(html_361a22c129c3a94cf547bd1e63556b26);
+            
+        
+
+        circle_marker_015d703d90e0d8bcfad7a0cebffef512.bindPopup(popup_8219c6bd6727c9e609226f23100eb24b)
+        ;
+
+        
+    
+    
+            var circle_marker_2c8cc9a666acefdd51e828288ad62164 = L.circleMarker(
+                [7.53540333, 80.9520133],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_7c7cd8d16f19b83bf483318adb8688c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c57a5dd560fa7599a04c88afb88a87c0 = $(`<div id="html_c57a5dd560fa7599a04c88afb88a87c0" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53540333, 80.9520133</div>`)[0];
+                popup_7c7cd8d16f19b83bf483318adb8688c0.setContent(html_c57a5dd560fa7599a04c88afb88a87c0);
+            
+        
+
+        circle_marker_2c8cc9a666acefdd51e828288ad62164.bindPopup(popup_7c7cd8d16f19b83bf483318adb8688c0)
+        ;
+
+        
+    
+    
+            var circle_marker_2416df792be038978d278d1273659075 = L.circleMarker(
+                [7.53601499, 80.96049166],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_50b8f30b687b871b916a720348bc601a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_208100e808e4ff64d0e3fc92676858c0 = $(`<div id="html_208100e808e4ff64d0e3fc92676858c0" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53601499, 80.96049166</div>`)[0];
+                popup_50b8f30b687b871b916a720348bc601a.setContent(html_208100e808e4ff64d0e3fc92676858c0);
+            
+        
+
+        circle_marker_2416df792be038978d278d1273659075.bindPopup(popup_50b8f30b687b871b916a720348bc601a)
+        ;
+
+        
+    
+    
+            var circle_marker_a5b3c1444ceec95fc5edbbca435025dd = L.circleMarker(
+                [7.537235, 80.9556338],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_2858c68ef80dad024f72f3a788d0df8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_20373871e0d45a4dff9d436d225035c8 = $(`<div id="html_20373871e0d45a4dff9d436d225035c8" style="width: 100.0%; height: 100.0%;">Risk Area: A High Risk Area Location: 7.537235, 80.9556338</div>`)[0];
+                popup_2858c68ef80dad024f72f3a788d0df8d.setContent(html_20373871e0d45a4dff9d436d225035c8);
+            
+        
+
+        circle_marker_a5b3c1444ceec95fc5edbbca435025dd.bindPopup(popup_2858c68ef80dad024f72f3a788d0df8d)
+        ;
+
+        
+    
+    
+            var circle_marker_4de844575945d5dbd723f6d8890312a3 = L.circleMarker(
+                [7.53762, 80.95246833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_feadbc36f14c84567c47cb5ba66f7f28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_379155b8579c7e91038c79d0698b2a84 = $(`<div id="html_379155b8579c7e91038c79d0698b2a84" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53762, 80.95246833</div>`)[0];
+                popup_feadbc36f14c84567c47cb5ba66f7f28.setContent(html_379155b8579c7e91038c79d0698b2a84);
+            
+        
+
+        circle_marker_4de844575945d5dbd723f6d8890312a3.bindPopup(popup_feadbc36f14c84567c47cb5ba66f7f28)
+        ;
+
+        
+    
+    
+            var circle_marker_ccf78e6227d00d53962781a075f9f395 = L.circleMarker(
+                [7.5383933, 80.95709833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_dbcff3476fe0bc77c666b3172a5cc42b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b46491879e16e248b67b7116462fca2d = $(`<div id="html_b46491879e16e248b67b7116462fca2d" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.5383933, 80.95709833</div>`)[0];
+                popup_dbcff3476fe0bc77c666b3172a5cc42b.setContent(html_b46491879e16e248b67b7116462fca2d);
+            
+        
+
+        circle_marker_ccf78e6227d00d53962781a075f9f395.bindPopup(popup_dbcff3476fe0bc77c666b3172a5cc42b)
+        ;
+
+        
+    
+    
+            var circle_marker_e3fbd56202a63cdc728a307c51f1dddf = L.circleMarker(
+                [7.53933166, 80.9576466],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_a68738151dee29d1de89a2cb278cdb97 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2011087b99ef161fd74e8632cec7b7c = $(`<div id="html_d2011087b99ef161fd74e8632cec7b7c" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.53933166, 80.9576466</div>`)[0];
+                popup_a68738151dee29d1de89a2cb278cdb97.setContent(html_d2011087b99ef161fd74e8632cec7b7c);
+            
+        
+
+        circle_marker_e3fbd56202a63cdc728a307c51f1dddf.bindPopup(popup_a68738151dee29d1de89a2cb278cdb97)
+        ;
+
+        
+    
+    
+            var circle_marker_dc531e4d16ce8202384c2571e87fda78 = L.circleMarker(
+                [7.539931666, 80.95491833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_252778e45a61f669b6ba52391b98ebed = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41c83c8dcda3b34a02fa2fa0fafd1199 = $(`<div id="html_41c83c8dcda3b34a02fa2fa0fafd1199" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.539931666, 80.95491833</div>`)[0];
+                popup_252778e45a61f669b6ba52391b98ebed.setContent(html_41c83c8dcda3b34a02fa2fa0fafd1199);
+            
+        
+
+        circle_marker_dc531e4d16ce8202384c2571e87fda78.bindPopup(popup_252778e45a61f669b6ba52391b98ebed)
+        ;
+
+        
+    
+    
+            var circle_marker_3d3d0d8be2dc39fb8ffa517f56bfdca7 = L.circleMarker(
+                [7.54052999, 80.9577733],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_a37200038e1bd59e7f644382cc152243 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f614db905655d931d586248b9d8a331c = $(`<div id="html_f614db905655d931d586248b9d8a331c" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.54052999, 80.9577733</div>`)[0];
+                popup_a37200038e1bd59e7f644382cc152243.setContent(html_f614db905655d931d586248b9d8a331c);
+            
+        
+
+        circle_marker_3d3d0d8be2dc39fb8ffa517f56bfdca7.bindPopup(popup_a37200038e1bd59e7f644382cc152243)
+        ;
+
+        
+    
+    
+            var circle_marker_9bf22f5560e900988acc0225ec5d87ee = L.circleMarker(
+                [7.541631666, 80.95626999],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_61b28a6e796600f800377642a29c90a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9504b27257640d16a3876bbcb279e81 = $(`<div id="html_a9504b27257640d16a3876bbcb279e81" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.541631666, 80.95626999</div>`)[0];
+                popup_61b28a6e796600f800377642a29c90a2.setContent(html_a9504b27257640d16a3876bbcb279e81);
+            
+        
+
+        circle_marker_9bf22f5560e900988acc0225ec5d87ee.bindPopup(popup_61b28a6e796600f800377642a29c90a2)
+        ;
+
+        
+    
+    
+            var circle_marker_515f77381bd89f68c6b2c6d0e6efd171 = L.circleMarker(
+                [7.543175, 80.962705],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_5658dcd56cb31d2f20452579f3a0a61b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6282d0ec7d4bb208cbe1aea2c3d0d12a = $(`<div id="html_6282d0ec7d4bb208cbe1aea2c3d0d12a" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.543175, 80.962705</div>`)[0];
+                popup_5658dcd56cb31d2f20452579f3a0a61b.setContent(html_6282d0ec7d4bb208cbe1aea2c3d0d12a);
+            
+        
+
+        circle_marker_515f77381bd89f68c6b2c6d0e6efd171.bindPopup(popup_5658dcd56cb31d2f20452579f3a0a61b)
+        ;
+
+        
+    
+    
+            var circle_marker_7d15e7ce97fa6203281c3e1e94548c83 = L.circleMarker(
+                [7.543794999, 80.96155666],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_6baf9c99de71de45ad966b04d026d971 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_39d03f866df2de8a3b3c0d6f4990a36c = $(`<div id="html_39d03f866df2de8a3b3c0d6f4990a36c" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.543794999, 80.96155666</div>`)[0];
+                popup_6baf9c99de71de45ad966b04d026d971.setContent(html_39d03f866df2de8a3b3c0d6f4990a36c);
+            
+        
+
+        circle_marker_7d15e7ce97fa6203281c3e1e94548c83.bindPopup(popup_6baf9c99de71de45ad966b04d026d971)
+        ;
+
+        
+    
+    
+            var circle_marker_77faeac940f0aef2b542d83ff8541d03 = L.circleMarker(
+                [7.54527666, 80.96192666],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_83d9fcf2e09fe90687f87cbec6d55901 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6f21453f579dce1b5e61a8aa7c70619 = $(`<div id="html_a6f21453f579dce1b5e61a8aa7c70619" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.54527666, 80.96192666</div>`)[0];
+                popup_83d9fcf2e09fe90687f87cbec6d55901.setContent(html_a6f21453f579dce1b5e61a8aa7c70619);
+            
+        
+
+        circle_marker_77faeac940f0aef2b542d83ff8541d03.bindPopup(popup_83d9fcf2e09fe90687f87cbec6d55901)
+        ;
+
+        
+    
+    
+            var circle_marker_f1a152426fa83414864ea2be8377b17b = L.circleMarker(
+                [7.546685, 80.9577],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_22b880cf34cbba3037eca84f73ae1aee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84be6dd110a091c2938abd2afd4693a7 = $(`<div id="html_84be6dd110a091c2938abd2afd4693a7" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.546685, 80.9577</div>`)[0];
+                popup_22b880cf34cbba3037eca84f73ae1aee.setContent(html_84be6dd110a091c2938abd2afd4693a7);
+            
+        
+
+        circle_marker_f1a152426fa83414864ea2be8377b17b.bindPopup(popup_22b880cf34cbba3037eca84f73ae1aee)
+        ;
+
+        
+    
+    
+            var circle_marker_0764f8d30849b870424146511921e1d4 = L.circleMarker(
+                [7.550201666, 80.95954833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_e9d0dd03ded25fc5b3b206598e504d02 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fa5cb9fac0aea312919c3b0ef6ac7e20 = $(`<div id="html_fa5cb9fac0aea312919c3b0ef6ac7e20" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.550201666, 80.95954833</div>`)[0];
+                popup_e9d0dd03ded25fc5b3b206598e504d02.setContent(html_fa5cb9fac0aea312919c3b0ef6ac7e20);
+            
+        
+
+        circle_marker_0764f8d30849b870424146511921e1d4.bindPopup(popup_e9d0dd03ded25fc5b3b206598e504d02)
+        ;
+
+        
+    
+    
+            var circle_marker_dfc6d2e632a10e88f43ea34bd167b293 = L.circleMarker(
+                [7.55108, 80.95904666],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_4023d913e64d29cddb59b233641e3015 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b860da38f3ec09e70eeee5897d8f43e5 = $(`<div id="html_b860da38f3ec09e70eeee5897d8f43e5" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.55108, 80.95904666</div>`)[0];
+                popup_4023d913e64d29cddb59b233641e3015.setContent(html_b860da38f3ec09e70eeee5897d8f43e5);
+            
+        
+
+        circle_marker_dfc6d2e632a10e88f43ea34bd167b293.bindPopup(popup_4023d913e64d29cddb59b233641e3015)
+        ;
+
+        
+    
+    
+            var circle_marker_61a73742e9daf7d67874937e01bb1fdf = L.circleMarker(
+                [7.55205, 80.954655],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_a4590bd50fcaf7521f3049dcfd76f649 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cf62a4390280e23727a5bedf1629164 = $(`<div id="html_7cf62a4390280e23727a5bedf1629164" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.55205, 80.954655</div>`)[0];
+                popup_a4590bd50fcaf7521f3049dcfd76f649.setContent(html_7cf62a4390280e23727a5bedf1629164);
+            
+        
+
+        circle_marker_61a73742e9daf7d67874937e01bb1fdf.bindPopup(popup_a4590bd50fcaf7521f3049dcfd76f649)
+        ;
+
+        
+    
+    
+            var circle_marker_aa2fa63c060d04cadf01fce679a4dd06 = L.circleMarker(
+                [7.55304499, 80.95701833],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_fc6ee825dbf8bba5cd26d3e9e9ba0a01 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_055bb944d59f00ea2b7348c9b55b0729 = $(`<div id="html_055bb944d59f00ea2b7348c9b55b0729" style="width: 100.0%; height: 100.0%;">Risk Area: A High Risk Area Location: 7.55304499, 80.95701833</div>`)[0];
+                popup_fc6ee825dbf8bba5cd26d3e9e9ba0a01.setContent(html_055bb944d59f00ea2b7348c9b55b0729);
+            
+        
+
+        circle_marker_aa2fa63c060d04cadf01fce679a4dd06.bindPopup(popup_fc6ee825dbf8bba5cd26d3e9e9ba0a01)
+        ;
+
+        
+    
+    
+            var circle_marker_47b97d062bbce8c7236d90d26b9c1907 = L.circleMarker(
+                [7.554361666, 80.95490666],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_3ced7417b11b1c8eac87872976b341f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bf0b8226d7675862107bfb79004c8ff1 = $(`<div id="html_bf0b8226d7675862107bfb79004c8ff1" style="width: 100.0%; height: 100.0%;">Risk Area: A Low Risk Area Location: 7.554361666, 80.95490666</div>`)[0];
+                popup_3ced7417b11b1c8eac87872976b341f9.setContent(html_bf0b8226d7675862107bfb79004c8ff1);
+            
+        
+
+        circle_marker_47b97d062bbce8c7236d90d26b9c1907.bindPopup(popup_3ced7417b11b1c8eac87872976b341f9)
+        ;
+
+        
+    
+    
+            var circle_marker_ac4981c2ff20a7af116474afce086864 = L.circleMarker(
+                [7.55743833, 80.95722333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_697abbd18736b61a93fa58186d5c6b56 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f09fb8e8f9fa359c4744622dfae5dfbe = $(`<div id="html_f09fb8e8f9fa359c4744622dfae5dfbe" style="width: 100.0%; height: 100.0%;">Risk Area: A High Risk Area Location: 7.55743833, 80.95722333</div>`)[0];
+                popup_697abbd18736b61a93fa58186d5c6b56.setContent(html_f09fb8e8f9fa359c4744622dfae5dfbe);
+            
+        
+
+        circle_marker_ac4981c2ff20a7af116474afce086864.bindPopup(popup_697abbd18736b61a93fa58186d5c6b56)
+        ;
+
+        
+    
+    
+            var circle_marker_4184d7182299ca04019a8dfb60fac8f6 = L.circleMarker(
+                [7.557891666, 80.95798166],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_a3f5a6a9722729c4da85c4345afc7765 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0935b7e51f545e13c16cf671cad0945 = $(`<div id="html_e0935b7e51f545e13c16cf671cad0945" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.557891666, 80.95798166</div>`)[0];
+                popup_a3f5a6a9722729c4da85c4345afc7765.setContent(html_e0935b7e51f545e13c16cf671cad0945);
+            
+        
+
+        circle_marker_4184d7182299ca04019a8dfb60fac8f6.bindPopup(popup_a3f5a6a9722729c4da85c4345afc7765)
+        ;
+
+        
+    
+    
+            var circle_marker_52d622aaa5609044b8525b826c9b1b0d = L.circleMarker(
+                [7.561745, 80.95599],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_cd92b42a7ccbd4e7677f496502af55ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5501b60f9b980aedcea820448703ad09 = $(`<div id="html_5501b60f9b980aedcea820448703ad09" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.561745, 80.95599</div>`)[0];
+                popup_cd92b42a7ccbd4e7677f496502af55ae.setContent(html_5501b60f9b980aedcea820448703ad09);
+            
+        
+
+        circle_marker_52d622aaa5609044b8525b826c9b1b0d.bindPopup(popup_cd92b42a7ccbd4e7677f496502af55ae)
+        ;
+
+        
+    
+    
+            var circle_marker_e6a03a78e99a1c7435025a202d54ba1b = L.circleMarker(
+                [7.562025, 80.958315],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_98a11fb8dd3efb2488b5648f2bd95105);
+        
+    
+        var popup_00cd8c45467400a43ab306b91666068c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_672af0f07ac70a87f309bfd4b3a17bff = $(`<div id="html_672af0f07ac70a87f309bfd4b3a17bff" style="width: 100.0%; height: 100.0%;">Risk Area: A Medium Risk Area Location: 7.562025, 80.958315</div>`)[0];
+                popup_00cd8c45467400a43ab306b91666068c.setContent(html_672af0f07ac70a87f309bfd4b3a17bff);
+            
+        
+
+        circle_marker_e6a03a78e99a1c7435025a202d54ba1b.bindPopup(popup_00cd8c45467400a43ab306b91666068c)
+        ;
+
+        
+    
+</script>
+</html>
