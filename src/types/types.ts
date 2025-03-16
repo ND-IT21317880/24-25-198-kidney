@@ -22,14 +22,14 @@ export type PreventionStrategies = {
 export type CKDProfile = {
   stage: string;
   educationYrs: number;
-  herbicideUsageHistory: number;
-  appliedHerbicideV1: number;
-  ppeUsageScoreSeverity: number;
-  wellWaterHx: number;
-  naturalWaterDrinkingV1: number;
-  exhausionV5: number;
-  exhausionSeverityV5: number;
-  jointPainV2: number;
+  herbicideUsageHistory: string;
+  appliedHerbicideV1: string;
+  ppeUsageScoreSeverity: string;
+  wellWaterHx: string;
+  naturalWaterDrinkingV1: string;
+  exhausionV5: string;
+  exhausionSeverityV5: string;
+  jointPainV2: string;
   naV3: number;
   kV3: number;
   kV4: number;
