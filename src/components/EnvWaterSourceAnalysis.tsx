@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 
 interface ChiSquareResults {
@@ -24,9 +25,8 @@ const EnvWaterSourceAnalysis: React.FC = () => {
     const handleAnalysis = async () => {
         setLoading(true);
         try {
-            // const response = await axios.get("http://127.0.0.1:5000/water_source_analysis");
-            // setResults(response.data);
-            setResults(null);
+            const response = await axios.get("http://127.0.0.1:5000/water_source_analysis");
+            setResults(response.data);
         } catch (error) {
             console.error("Error:", error);
         } finally {

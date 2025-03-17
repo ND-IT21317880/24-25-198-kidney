@@ -1,4 +1,5 @@
 import EnvWaterSourceAnalysis from "@/components/EnvWaterSourceAnalysis";
+import axios from "axios";
 import { useState } from "react";
 
 interface TestResult {
@@ -21,8 +22,8 @@ function EnvStatisticalTests() {
 
     const handleTestClick = async () => {
         try {
-            // const response = await axios.get("http://127.0.0.1:5000/mannwhitneyu");
-            // setTestResults(response.data);
+            const response = await axios.get("http://127.0.0.1:5000/mannwhitneyu");
+            setTestResults(response.data);
             setSelectedVariable(null); // Reset selected variable when new results are loaded
         } catch (error) {
             console.error("Error:", error);

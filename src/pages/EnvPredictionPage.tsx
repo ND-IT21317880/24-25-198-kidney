@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"
 
 interface FormDataType {
     temp: string;
@@ -32,9 +33,8 @@ const EnvPredictionPage: React.FC = () => {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            // const response = await axios.post("http://127.0.0.1:5000/predict", formData);
-            // setPrediction(response.data.prediction);
-            setPrediction(null);
+            const response = await axios.post("http://127.0.0.1:5000/predict", formData);
+            setPrediction(response.data.prediction);
         } catch (error) {
             console.error("Error:", error);
         }
