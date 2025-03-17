@@ -59,9 +59,10 @@ const RegisterPage = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <Toaster position="top-center" />
       <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">Register</CardTitle>
-        </CardHeader>
+      <CardHeader>
+      <CardTitle className="text-center text-2xl font-bold">Registration</CardTitle>
+      </CardHeader>
+
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>

@@ -13,8 +13,8 @@ const EgfrHome = () => {
           transition={{ duration: 1 }}
           className="z-10"
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-black drop-shadow-lg">
-            Welcome to the eGFR Prediction Web App
+          <h1 className="text-xl md:text-6xl font-bold text-black drop-shadow-lg">
+            Welcome to the eGFR Prediction
           </h1>
           <p className="text-lg md:text-xl text-black mt-4 max-w-2xl mx-auto">
             A cutting-edge AI model designed to predict EGFR levels with high

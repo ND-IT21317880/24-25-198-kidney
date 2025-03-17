@@ -36,12 +36,13 @@ const EGFRPredictionForm = () => {
       };
 
       const response = await predictEGFR(requestData);
-      setPrediction(response ?? null);
+      if (!response) throw new Error("No response from server");
+      setPrediction(response);
       setIsModalOpen(true); // Open the modal when prediction is successful
 
       toast.success("Prediction successful!");
     } catch (error) {
-      toast.error("Failed to predict eGFR.");
+      toast.error("Failed to predict eGFR. Please try again later.");
       console.error("Prediction error:", error);
     } finally {
       setIsLoading(false);
@@ -49,11 +50,14 @@ const EGFRPredictionForm = () => {
   };
 
   return (
-    <div className="p-4">
-      <div className="grid grid-cols-3 gap-4 mb-4">
+    <div className="p-8 max-w-3xl mx-auto bg-white shadow-lg rounded-lg">
+      <h2 className="text-3xl font-bold text-center mb-6">eGFR Prediction Form</h2>
+      <div className="grid grid-cols-3 gap-6 mb-6">
         {[2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024].map((year) => (
           <div key={year}>
-            <Label htmlFor={`egfr-${year}`}>eGFR {year}</Label>
+            <Label htmlFor={`egfr-${year}`} className="text-lg font-semibold">
+              eGFR {year}
+            </Label>
             <Input
               id={`egfr-${year}`}
               type="number"
@@ -62,12 +66,16 @@ const EGFRPredictionForm = () => {
                 handleInputChange(year.toString(), e.target.value)
               }
               placeholder={`Enter eGFR for ${year}`}
+              className="p-3 text-lg border border-gray-400 rounded-md w-full"
             />
           </div>
         ))}
       </div>
 
-      <Button onClick={handleSubmit} disabled={isLoading}>
+      <Button 
+        onClick={handleSubmit} 
+        disabled={isLoading} 
+        className="w-full text-xl py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
         {isLoading ? "Predicting..." : "Predict Next 10 Years"}
       </Button>
 
@@ -75,15 +83,21 @@ const EGFRPredictionForm = () => {
       {prediction && (
         <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
           <DialogTrigger asChild>
-            <Button className="mt-4 ml-12">View Prediction</Button>
+            <Button className="mt-6 w-full text-lg bg-gray-700 text-white py-3 rounded-md hover:bg-gray-800">
+              View Prediction
+            </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-2xl">
-            <h2 className="text-xl font-bold mb-4">Predicted eGFR Chart</h2>
-            <img
-              src={`http://127.0.0.1:5002${prediction?.image_url}`}
-              alt="Predicted eGFR"
-              className="w-full rounded-lg shadow-lg"
-            />
+          <DialogContent className="max-w-2xl p-6">
+            <h2 className="text-2xl font-bold mb-4">Predicted eGFR Chart</h2>
+            {prediction.image_url ? (
+              <img
+                src={`http://127.0.0.1:5002${prediction.image_url}`}
+                alt="Predicted eGFR"
+                className="w-full rounded-lg shadow-lg"
+              />
+            ) : (
+              <p className="text-center text-red-500">No prediction available.</p>
+            )}
           </DialogContent>
         </Dialog>
       )}

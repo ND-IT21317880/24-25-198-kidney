@@ -48,18 +48,23 @@ const LoginPage = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <Toaster position="top-center" />
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-xl p-8 shadow-2xl">
         <CardHeader>
-          <CardTitle className="text-center">Login</CardTitle>
+          <CardTitle className="text-center text-3xl font-bold">
+            Login
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div>
-              <Label htmlFor="username">Username</Label>
+              <Label htmlFor="username" className="text-lg font-semibold">
+                Username
+              </Label>
               <Input
                 id="username"
                 {...register("username")}
                 placeholder="Enter your username"
+                className="h-12 text-lg p-6"
               />
               {errors.username && (
                 <p className="text-sm text-red-500">
@@ -68,12 +73,15 @@ const LoginPage = () => {
               )}
             </div>
             <div>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password" className="text-lg font-semibold">
+                Password
+              </Label>
               <Input
                 id="password"
                 type="password"
                 {...register("password")}
                 placeholder="Enter your password"
+                className="h-12 text-lg p-6"
               />
               {errors.password && (
                 <p className="text-sm text-red-500">
@@ -81,15 +89,15 @@ const LoginPage = () => {
                 </p>
               )}
             </div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full h-12 text-lg">
               Login
             </Button>
           </form>
         </CardContent>
         <CardFooter className="flex justify-center">
-          <p className="text-sm">
+          <p className="text-lg">
             Don't have an account?{" "}
-            <Link to="/register" className="text-blue-500 hover:underline">
+            <Link to="/register" className="text-blue-500 hover:underline font-semibold">
               Register here
             </Link>
           </p>
