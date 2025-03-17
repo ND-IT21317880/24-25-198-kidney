@@ -101,8 +101,9 @@ const Home = () => {
                   to: "/water-quality",
                 },
                 {
-                  title: "Kidney Transplant",
+                  title: "Environmental Risk Factors",
                   desc: "Expert care and support for kidney transplant patients.",
+                  to: "/environmental-factors",
                 },
               ].map((service, index) => (
                 <Link to={service.to ?? "/"}>
