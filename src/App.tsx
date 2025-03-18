@@ -14,6 +14,9 @@ import EGFRPredictionPage from "./pages/EGFRPredictionPage";
 import WaterQualityRiskHome from "./pages/WaterQualityRiskHome";
 import WaterQualityRecommendationsPage from "./pages/WaterQualityRecomendationsPage";
 import WaterRiskLocationPage from "./pages/WaterRiskLocationPage";
+import EnvFactorsPage from "./pages/EnvFactorsPage";
+import EnvPredictionPage from "./pages/EnvPredictionPage";
+import EnvStatisticalTests from "./pages/EnvStatisticalTests";
 
 function App() {
   return (
@@ -46,6 +49,18 @@ function App() {
           <Route
             path="/water-risk-location"
             element={<WaterRiskLocationPage />}
+          />
+          <Route
+            path="/environmental-factors"
+            element={<EnvFactorsPage />}
+          />
+          <Route
+            path="/environmental-factors-predict"
+            element={<EnvPredictionPage/>}
+          />
+          <Route
+            path="/environmental-factors-stats"
+            element={<EnvStatisticalTests />}
           />
         </Routes>
       </BrowserRouter>
