@@ -18,7 +18,7 @@ CORS(app)
 df = pd.read_csv('env_models/env_data.csv')
 
 def prediction(features):
-    filename = 'env_models/predictor.pickle'
+    filename = 'env_models/env_risk_predictor.pkl'
     with open(filename, 'rb') as file:
         model = pickle.load(file)
     pred_value = model.predict([features])
@@ -28,18 +28,25 @@ def prediction(features):
 def predict():
     try:
         data = request.json
-        features = [
-            float(data['temp']), float(data['precip']),
-            float(data['Na+']), float(data['Ca2+']),
-            float(data['Mg2+']), float(data['F-']),
-            float(data['depth']), float(data['alkalinity']),
-            float(data['Na_Cl']), float(data['SO42-']),
-            float(data['K+']), float(data['PO43-'])
-        ]
-        
+
+        # Convert inputs to float
+        sodium = float(data['sodium'])
+        chloride = float(data['chloride'])
+        calcium = float(data['calcium'])
+        magnesium = float(data['magnesium'])
+        temperature = float(data['temperature'])
+
+        # Compute Na/Cl Ratio
+        if chloride == 0:
+            return jsonify({'error': 'Chloride value cannot be zero'}), 400
+        na_cl_ratio = sodium / chloride
+
+        # Prepare feature list for the model
+        features = [sodium, magnesium, calcium, na_cl_ratio, temperature]
+
         pred = prediction(features)
         return jsonify({'prediction': pred[0]})
-    
+
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
@@ -167,6 +174,14 @@ def water_source_analysis():
     
     except Exception as e:
         print(f"Error in water source analysis: {str(e)}")
+        return jsonify({'error': str(e)}), 400
+    
+@app.route('/locations', methods=['GET'])
+def get_locations():
+    try:
+        locations = df[['Lat', 'Long', 'Risk']].to_dict(orient='records')
+        return jsonify(locations)
+    except Exception as e:
         return jsonify({'error': str(e)}), 400
     
 
